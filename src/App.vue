@@ -1,38 +1,32 @@
 <template>
-  <div id="app">
-    <p v-for="(item, index) in data" :key="index">
-      {{ item }}
-      <button @click="handleDelete(item)">Delete</button>
-    </p>
-  </div>
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <card cardWords="test">
+                        <h2>{{ title }}</h2>
+                        <p>White card is so ugli!</p>
+                    </card>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
+import Card from './components/Card.vue'
 
 export default {
-  name: 'App',
-  components: {
-  },
-  data() {
-    return {
-      data: ['Cam', 'Buoi', 'Xoai']
+    components: {
+        Card
+    },
+    data() {
+        return {
+            title: 'Cart Title'
+        }
     }
-  },
-  methods: {
-    handleDelete(i) {
-      this.data = this.data.filter((e) => e !== i )
-    }
-  }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
