@@ -1,12 +1,11 @@
 <template>
-  <div class="card-vocab">
-    <h1>This is Card page</h1>
+  <div>
+      <h1>this is About page</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Card",
 };
 </script>
 
