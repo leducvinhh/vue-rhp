@@ -3,9 +3,9 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <button class="btn btn-outline-danger" @click="selectedComponent = 'Card'">Card</button>
-          <button class="btn btn-outline-danger" @click="selectedComponent = 'Contact'">Contact</button>
-          <button class="btn btn-outline-danger" @click="selectedComponent = 'About'">About</button>
+          <button class="btn btn-outline-danger" @click="selectedComponent = 'Card'">Card Page</button>
+          <button class="btn btn-outline-danger" @click="selectedComponent = 'Contact'">Contact Page</button>
+          <button class="btn btn-outline-danger" @click="selectedComponent = 'About'">About Page</button>
         </div>
       </div>
       <div class="row">
