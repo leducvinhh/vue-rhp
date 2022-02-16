@@ -6,19 +6,30 @@
 
 <script>
 export default {
-  destroyed() {
-    console.log("destroyed about");
-  },
-  deactivated() {
-    console.log("deactivated about");
-    console.log("deactivated about");
-  },
-  activated() {
-    console.log("activated about");
+  beforeCreate() {
+    console.log('before created about');
   },
   created() {
-    console.log("created about");
+    console.log('created about');
   },
+  beforeMount() {
+    console.log('before mount about');
+  },
+  mounted() {
+    console.log('mounted about');
+  },
+  beforeUpdate() {
+    console.log('before update about');
+  },
+  updated() {
+    console.log('updated about');
+  },
+  beforeDestroy() {
+    console.log('before destroy about');
+  },
+  destroyed() {
+    console.log('destroyed about');
+  }
 };
 </script>
 
