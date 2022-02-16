@@ -10,9 +10,7 @@
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <keep-alive>
-            <component :is="selectedComponent"></component>
-          </keep-alive>
+          <component :is="selectedComponent"></component>
         </div>
       </div>
     </div>
