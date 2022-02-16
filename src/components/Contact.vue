@@ -8,20 +8,23 @@
 
 <script>
 export default {
-    data() {
-        return {
-            count: 0,
-        }
-    },
-    destroyed() {
-        console.log('destroyed');
-    },
-    deactivated() {
-        console.log('deactivated');
-    },
-    activated() {
-        console.log('activated');
-    }
+  data() {
+    return {
+      count: 0,
+    };
+  },
+  destroyed() {
+    console.log("destroyed contact");
+  },
+  deactivated() {
+    console.log("deactivated contact");
+  },
+  activated() {
+    console.log("activated contact");
+  },
+  created() {
+    console.log("created contact");
+  },
 };
 </script>
 
