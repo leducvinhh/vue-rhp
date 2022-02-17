@@ -1,41 +1,32 @@
 <template>
-  <div id="app">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <button class="btn btn-outline-danger" @click="selectedComponent = 'Card'">Card Page</button>
-          <button class="btn btn-outline-danger" @click="selectedComponent = 'Contact'">Contact Page</button>
-          <button class="btn btn-outline-danger" @click="selectedComponent = 'About'">About Page</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <component :is="selectedComponent"></component>
-        </div>
-      </div>
-    </div>
+  <div class="container">
+    <new-items @addTodo="addTodo"/>
+    <items-layout :items="items"/>
   </div>
 </template>
 
 <script>
-import About from './components/About.vue';
-import Card from "./components/Card.vue";
-import Contact from './components/Contact.vue';
-
+import ItemsLayout from './components/ItemsLayout.vue'
+import NewItems from './components/NewItems.vue'
 export default {
-  components: {
-    Card,
-    Contact,
-    About,
-  },
+  components: { ItemsLayout, NewItems},
+  name: 'App',
   data() {
     return {
-      title: "Cart Title",
-      selectedComponent: 'Card'
-    };
+      items: [
+        'I love you',
+      ],
+      maxItems: 10,
+    }
   },
-};
+  methods: {
+    addTodo(e) {
+      this.items.push(e);
+    }
+  }
+}
 </script>
 
 <style>
+
 </style>
